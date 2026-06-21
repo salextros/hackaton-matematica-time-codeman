@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TIME CodeMan | Misión Tablas de Multiplicar</title>
+  <meta name="description" content="Página web infantil gamificada para la Hackatón Pedagógica Virtual: misión de multiplicación, villano Olvidín, tabla del 7, canción de la tabla del 8 y evaluación final." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="sky-decoration" aria-hidden="true">
+    <span>8</span><span>7</span><span>×</span><span>9</span><span>+</span>
+  </div>
+
+  <header class="hero" id="inicio">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a class="brand" href="#inicio">
+        <img src="assets/banner-time-codeman.png" alt="Logo TIME CodeMan" />
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#producto">Producto</a>
+        <a href="#misiones">Misiones</a>
+        <a href="#evaluacion">Evaluación</a>
+        <a href="#conclusiones">Conclusiones</a>
+        <a href="#referencias">Referencias</a>
+      </div>
+    </nav>
+
+    <section class="hero-content">
+      <div class="hero-text">
+        <p class="eyebrow">Actividad 1 · Hackatón pedagógica virtual</p>
+        <h1>La misión matemática contra Olvidín</h1>
+        <p class="hero-subtitle">
+          Ayuda a <strong>CodeMan 10.0</strong> a recuperar la memoria de las tablas de multiplicar por medio de juegos,
+          videos, canciones, retos y una batalla final interactiva.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#misiones">Comenzar aventura</a>
+          <a class="btn secondary" href="#producto">Ver recurso</a>
+        </div>
+      </div>
+
+      <div class="mascot-card">
+        <div class="bubble bubble-top">¡Vamos equipo!</div>
+        <img src="assets/codeman-10.png" alt="Mascota CodeMan 10.0" class="codeman" />
+        <div class="bubble bubble-bottom">7 × 8 = 56</div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section intro-section" id="producto">
+      <div class="section-heading center">
+        <p class="eyebrow green">Producto pedagógico</p>
+        <h2>Un recurso digital para aprender jugando</h2>
+        <p>
+          La página organiza los insumos de la secuencia didáctica en una aventura infantil. Los estudiantes avanzan
+          por estaciones, practican, cantan y aplican la multiplicación en situaciones de la vida cotidiana.
+        </p>
+      </div>
+
+      <div class="info-grid">
+        <article class="info-card red">
+          <span>🎯</span>
+          <h3>Objetivos</h3>
+          <p>Fortalecer la memorización y aplicación de las tablas de multiplicar mediante retos lúdicos y digitales.</p>
+        </article>
+        <article class="info-card yellow">
+          <span>🧩</span>
+          <h3>Metodología</h3>
+          <p>Aprendizaje basado en retos, gamificación narrativa, trabajo colaborativo y evaluación formativa.</p>
+        </article>
+        <article class="info-card blue">
+          <span>🛠️</span>
+          <h3>Recursos</h3>
+          <p>Kahoot, LearningApps, videos, canción de la tabla del 8, Genially y página web centralizadora.</p>
+        </article>
+        <article class="info-card purple">
+          <span>🏆</span>
+          <h3>Evaluación</h3>
+          <p>Seguimiento por misiones y batalla final para resolver multiplicaciones y problemas matemáticos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section mission-section" id="misiones">
+      <div class="section-heading center light">
+        <p class="eyebrow yellow-text">Ruta de aprendizaje</p>
+        <h2>Misiones para derrotar a Olvidín</h2>
+        <p>
+          Cada misión activa una forma distinta de aprender: juego, video, memoria visual, música, problemas y cierre reflexivo.
+        </p>
+      </div>
+
+      <div class="progress-box">
+        <div class="progress-title">
+          <span>⭐ Progreso de la aventura</span>
+          <strong id="progressText">0 de 6 misiones completadas</strong>
+        </div>
+        <div class="progress-bar"><div id="progressFill"></div></div>
+      </div>
+
+      <div class="mission-grid">
+        <article class="mission-card">
+          <div class="mission-badge">1</div>
+          <h3>Multiplicación básica</h3>
+          <p>Reto inicial para activar saberes previos y detectar cómo está el grupo antes de iniciar la aventura.</p>
+          <a class="btn small" href="https://kahoot.it/solo/0619ad17-7db3-4411-a09e-f066559508cf_1781976603337" target="_blank" rel="noopener">Abrir Kahoot</a>
+          <button class="check-btn" data-step="1">Marcar misión</button>
+        </article>
+
+        <article class="mission-card wide">
+          <div class="mission-badge">2</div>
+          <h3>Un villano llamado Olvidín</h3>
+          <p>Video narrativo para presentar el conflicto: Olvidín quiere borrar la memoria de las tablas.</p>
+          <div class="video-box">
+            <video controls preload="metadata" data-video="villano-olvidin">
+              <source src="videos/villano-olvidin.mp4" type="video/mp4">
+            </video>
+            <div class="missing-video">
+              <strong>Video pendiente</strong>
+              <span>Coloca el archivo en <code>videos/villano-olvidin.mp4</code></span>
+            </div>
+          </div>
+          <button class="check-btn" data-step="2">Marcar misión</button>
+        </article>
+
+        <article class="mission-card wide">
+          <div class="mission-badge">3</div>
+          <h3>La tabla del 7</h3>
+          <p>Juego interactivo para practicar memoria visual, concentración y reconocimiento de resultados.</p>
+          <div class="embed-box">
+            <iframe src="https://learningapps.org/watch?v=pbhh3i2qa26" title="Actividad tabla del 7 en LearningApps" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <a class="btn small" href="https://learningapps.org/watch?v=pbhh3i2qa26" target="_blank" rel="noopener">Abrir actividad</a>
+          <button class="check-btn" data-step="3">Marcar misión</button>
+        </article>
+
+        <article class="mission-card wide">
+          <div class="mission-badge">4</div>
+          <h3>Canción de la tabla del 8</h3>
+          <p>Actividad musical para aprender con ritmo, repetición, palmas y participación corporal.</p>
+          <div class="video-box">
+            <video controls preload="metadata" data-video="cancion-tabla-8">
+              <source src="videos/cancion-tabla-8.mp4" type="video/mp4">
+            </video>
+            <div class="missing-video">
+              <strong>Video pendiente</strong>
+              <span>Coloca el archivo en <code>videos/cancion-tabla-8.mp4</code></span>
+            </div>
+          </div>
+          <div class="audio-card">
+            <span>🎵 Audio de apoyo</span>
+            <audio controls preload="metadata">
+              <source src="audios/el-tren-del-ocho.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+          <button class="check-btn" data-step="4">Marcar misión</button>
+        </article>
+
+        <article class="mission-card wide" id="evaluacion">
+          <div class="mission-badge">5</div>
+          <h3>Batalla final: worksheet</h3>
+          <p>Solución de multiplicaciones y problemas matemáticos para aplicar lo aprendido en situaciones cotidianas.</p>
+          <div class="embed-box genially">
+            <iframe src="https://view.genially.com/6a30c0b80309376ec8a62b80" title="Evaluación final en Genially" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <a class="btn small" href="https://view.genially.com/6a30c0b80309376ec8a62b80" target="_blank" rel="noopener">Abrir evaluación final</a>
+          <button class="check-btn" data-step="5">Marcar misión</button>
+        </article>
+
+        <article class="mission-card final-card" id="conclusiones">
+          <div class="mission-badge">6</div>
+          <h3>Conclusiones de la aventura</h3>
+          <p>
+            La derrota de Olvidín no es solo el final del juego: es la evidencia de que los estudiantes pueden aprender
+            matemáticas con emoción, colaboración y confianza.
+          </p>
+          <button class="check-btn" data-step="6">Marcar misión</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section conclusions-section">
+      <div class="section-heading center">
+        <p class="eyebrow green">Conclusiones</p>
+        <h2>Lo que logramos con la secuencia</h2>
+      </div>
+      <div class="conclusion-cards">
+        <article>
+          <span>🦹‍♂️</span>
+          <p>La introducción del villano Olvidín transforma el aprendizaje abstracto de las tablas de multiplicar en un propósito tangible y lúdico.</p>
+        </article>
+        <article>
+          <span>🎮</span>
+          <p>El uso de Kahoot o Quizizz permite mapear conocimientos previos, reducir la ansiedad matemática y ofrecer un punto de partida seguro.</p>
+        </article>
+        <article>
+          <span>🎧</span>
+          <p>Las misiones 7, 8 y 9 combinan memoria visual, canal auditivo-rítmico y resolución de problemas lógicos para atender diferentes estilos de aprendizaje.</p>
+        </article>
+        <article>
+          <span>⚔️</span>
+          <p>La Batalla Final permite aplicar lo aprendido en problemas cotidianos, demostrando que multiplicar ayuda a resolver situaciones del entorno.</p>
+        </article>
+        <article>
+          <span>🌟</span>
+          <p>El cierre se vive como el clímax de la aventura, no como un examen punitivo, fortaleciendo la autoeficacia y el recuerdo escolar positivo.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section pitch-section" id="pitch">
+      <div class="section-heading center light">
+        <p class="eyebrow yellow-text">Video pitch académico</p>
+        <h2>Presentación del equipo</h2>
+        <p>
+          Espacio para presentar el problema educativo, la solución gamificada, los recursos utilizados y la forma de evaluación.
+        </p>
+      </div>
+      <div class="video-box pitch-video">
+        <video controls preload="metadata" data-video="pitch-academico">
+          <source src="videos/pitch-academico.mp4" type="video/mp4">
+        </video>
+        <div class="missing-video">
+          <strong>Video pitch pendiente</strong>
+          <span>Coloca el archivo en <code>videos/pitch-academico.mp4</code></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section references-section" id="referencias">
+      <div class="section-heading center">
+        <p class="eyebrow green">Referencias</p>
+        <h2>Soporte teórico</h2>
+      </div>
+      <div class="references-box">
+        <p>Graham, C. R. (2006). <em>Sistemas de aprendizaje combinado: definición, tendencias actuales y direcciones futuras.</em></p>
+        <p>Fouz-González, J., &amp; de-la-Calle, C. (2020). Gamificación y flipped learning en la enseñanza de las matemáticas en Educación Primaria. <em>Revista Electrónica de Investigación Educativa.</em></p>
+        <p>Moreira, M. A. (2017). <em>Aprendizaje significativo crítico y tecnologías de la información y comunicación.</em></p>
+        <p>Deterding, S., Dixon, D., Khaled, R., y Nacke, L. (2011). De los elementos del diseño de juegos a la ludicidad: definiendo la gamificación.</p>
+      </div>
+    </section>
+
+    <section class="section evidence-section">
+      <div class="section-heading center">
+        <p class="eyebrow green">Evidencia</p>
+        <h2>Guía de la actividad</h2>
+      </div>
+      <figure>
+        <img src="assets/actividad-hackaton.png" alt="Instrucciones de la Actividad 1 Hackatón pedagógica virtual" />
+        <figcaption>Actividad 1: Hackatón pedagógica virtual.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/banner-time-codeman.png" alt="TIME CodeMan" />
+    <p><strong>TIME CodeMan</strong> · Transforma, innova, motiva y educa.</p>
+    <p>Recurso pedagógico gamificado para fortalecer las tablas de multiplicar.</p>
+    <a href="#inicio">Volver al inicio ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
